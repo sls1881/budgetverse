@@ -1,30 +1,25 @@
 //magic string
 const USER = 'USER';
 
-defaultEmptyUser = [];
-
+// defaultEmptyUser = [];
 //getUser function
 
 export function getUser() {
-    const stringyUser = localStorage.getItem(USER);
+    let user = JSON.parse(localStorage.getItem(USER));
 
-    if (stringyUser) {
-        const parsedUser = JSON.parse(stringyUser);
-
-        return parsedUser;
-    } else {
-        const stringyDefaultUser = JSON.stringify(defaultEmptyUser);
-        localStorage.setItem(USER, stringyDefaultUser);
-
-        return defaultEmptyUser;
+    if (!user) {
+        user = [];
+        localStorage.setItem(USER, JSON.stringify('user'));
     }
+    return user;
 }
 
-export function clearUser() {
-    const stringyDefaultUser = JSON.stringify(defaultEmptyUser);
 
-    localStorage.setItem(USER, stringyDefaultUser);
-}
+// export function clearUser() {
+//     const stringyDefaultUser = JSON.stringify(defaultEmptyUser);
+
+//     localStorage.setItem(USER, stringyDefaultUser);
+// }
 
 //setUser function
 export function setUser(USER) {
