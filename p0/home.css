@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+  }
+
+  h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .links {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .button {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+  }
