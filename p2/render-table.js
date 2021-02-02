@@ -4,16 +4,13 @@
 export function renderTableRow(userProfile, userExpense) {
     const expenseItem = userExpense;
     const userItem = userProfile;
-    const gasExpense = document.getElementById('gas-expense');
     const gasBudget = document.getElementById('gas-budget');
     const gasSpent = document.getElementById('gas-spent');
     const gasRemaining = document.getElementById('gas-remaining');
-    const tBody = document.querySelector('tbody');
 
     gasBudget.textContent = userItem.expenses.gas;
     gasSpent.textContent = expenseItem.gas;
     gasRemaining.textContent = Number(userItem.expenses.gas) - Number(expenseItem.gas);
-    console.log(userItem)
     // Grab tds by ID
     //Update textContent (userProfile.gas)*10
 

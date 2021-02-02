@@ -1,13 +1,12 @@
-import { getExpenses, setExpenses, getUser, setUser } from '../localStorage.js';
+import { getExpenses, setExpenses, getUser } from '../localStorage.js';
 import { renderTableRow } from './render-table.js';
-import { findById } from './utils.js';
+// import { findById } from './utils.js';
 
 const finButton = document.getElementById('fin-button');
 
-const tbody = document.querySelector('tbody');
 const dynamicExpense = getExpenses();
-const stagnantUser = getUser();
-renderTableRow(stagnantUser, dynamicExpense);
+const user = getUser();
+renderTableRow(user, dynamicExpense);
 
 // for (let item of dynamicExpense) {
 //     const expenses = findById(item.expense, expense);
@@ -39,8 +38,7 @@ form.addEventListener('submit', (e) => {
     //add new item to existing stored item
     setExpenses(expenseItem);
     //call the render function
-    renderTableRow(stagnantUser, dynamicExpense);
-
+    renderTableRow(user, expenseItem);
 });
 
 finButton.addEventListener('click', () => {

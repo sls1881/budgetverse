@@ -15,22 +15,6 @@ export function getUser() {
     return user;
 }
 
-// export function getExpenses() {
-//     let expenses = JSON.parse(localStorage.getItem(EXPENSES));
-
-//     if (!expenses) {
-//         expenses = {
-//             gas: 0,
-//             groceries: 0,
-//             rentMortgage: 0,
-//             utilities: 0,
-//             other: 0,
-//         };
-//         localStorage.setItem(EXPENSES, JSON.stringify(expenses));
-//     }
-//     return expenses;
-// }
-
 export function getExpenses() {
     const stringyExpense = localStorage.getItem(EXPENSES);
 
@@ -76,3 +60,19 @@ export function setExpenses(expenses) {
 
 //setUser function
 //formData for p2
+
+// export function getExpenses() {
+//     let expenses = JSON.parse(localStorage.getItem(EXPENSES));
+
+//     if (!expenses) {
+//         expenses = {
+//             gas: 0,
+//             groceries: 0,
+//             rentMortgage: 0,
+//             utilities: 0,
+//             other: 0,
+//         };
+//         localStorage.setItem(EXPENSES, JSON.stringify(expenses));
+//     }
+//     return expenses;
+// }
