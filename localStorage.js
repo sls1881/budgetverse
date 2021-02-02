@@ -20,7 +20,13 @@ export function getExpenses() {
     let expenses = JSON.parse(localStorage.getItem(EXPENSES));
 
     if (!expenses) {
-        expenses = {};
+        expenses = {
+            gas: 0,
+            groceries: 0,
+            rentMortgage: 0,
+            utilities: 0,
+            other: 0,
+        };
         localStorage.setItem(EXPENSES, JSON.stringify(expenses));
     }
     return expenses;
@@ -32,8 +38,11 @@ export function setUser(USER) {
     localStorage.setItem(USER, stringyUser);
 }
 
+export function setExpenses(EXPENSES) {
+    const stringyExpense = JSON.stringify(EXPENSES);
 
-//formData for p1
+    localStorage.setItem(EXPENSES, stringyExpense);
+}
 
 
 

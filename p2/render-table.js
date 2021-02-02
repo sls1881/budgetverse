@@ -1,5 +1,4 @@
-// import {  } from '../p1/user.js';
-
+//Create render function for dynamic table rows
 export function renderTableRow(userProfile) {
 
     const tr = document.createElement('tr');

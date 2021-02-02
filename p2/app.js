@@ -1,4 +1,7 @@
-//
+import { getExpenses, setExpenses, getUser, setUser } from '../localStorage.js';
+import { renderTableRow } from './render-table.js';
+
+const finButton = document.getElementById('fin-button');
 
 // form button - event listener that ties to the (p3) which reducts the table data so user could see in the chart on p3 / at the end it should also redirect the user to the p3 display 
 
@@ -10,15 +13,27 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
 
-    const expenseItem = {
+    //Create data object from form on p2
+    const expenseItem = getExpenses();
 
+    const expense = formData.get('expense');
 
-    },
-};
+    const amount = formData.get('amount');
 
-type: value('gas')
+    //compare new expenseItem to current EXPENSE in local storage
+    expenseItem.expense += amount;
 
+    //add new item to existing stored item
+    setExpenses(expenseItem);
 
+    //call the render function
+    renderTableRow();
+
+});
+
+finButton.addEventListener('click', () => {
+    window.location = '../p3';
+});
 
 
 // const userProfile = {
