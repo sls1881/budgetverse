@@ -2,4 +2,4 @@
 const button = document.getElementById('begin');
 button.addEventListener('click', () => {
     window.location = '../p1';
-})
+});

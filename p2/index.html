@@ -10,73 +10,59 @@
 
 </head>
 
-<!-- we could add more labels this is just a ex: -->
-
 <body>
-
     <section class="main-section">
-
         <form>
-
+            Type
             <label>
+                <select>
 
-                type: drop-down
+                    <option value="gas">
+                        Gas
+                    </option>
 
-                <input name="expense" />
+                    <option value="groceries">
+                        Groceries
+                    </option>
 
+                    <option value="rent-mortgage">
+                        Housing expense
+                    </option>
+
+                    <option value="utilities">
+                        Utilities
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+                </select>
             </label>
-
             <label>
+                <label>
+                    Amount
+                    <input name="expense" />
 
-                place
-
-                <input name="expense" />
-
-            </label>
-
-            <label>
-
-                dollar
-
-                <input name="expense" />
-
-            </label>
-
-            <label>
-
-                expense
-
-                <input name="expense" />
-
-            </label>
-
-            <label>
-
-                expense
-
-                <input name="expense" />
-
-            </label>
-
-            <label>
-
-                expense
-
-                <input name="expense" />
-
-            </label>
-
-            <label>
-
-                expense
-
-                <input name="expense" />
-
-            </label>
-
-            <button class="form-button">Submit</button>
+                    <button class="form-button">Submit</button>
 
         </form>
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <td>Type</td>
+                    <td>Budget</td>
+                    <td>Spent</td>
+                    <td>Remaining</td>
+
+                </tr>
+
+            </thead>
+
+        </table>
+
 
     </section>
 
