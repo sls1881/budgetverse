@@ -5,7 +5,6 @@ const EXPENSES = 'EXPENSES';
 
 // defaultEmptyUser = [];
 //getUser function
-
 export function getUser() {
     let user = JSON.parse(localStorage.getItem(USER));
 
@@ -16,20 +15,43 @@ export function getUser() {
     return user;
 }
 
-export function getExpenses() {
-    let expenses = JSON.parse(localStorage.getItem(EXPENSES));
+// export function getExpenses() {
+//     let expenses = JSON.parse(localStorage.getItem(EXPENSES));
 
-    if (!expenses) {
-        expenses = {
+//     if (!expenses) {
+//         expenses = {
+//             gas: 0,
+//             groceries: 0,
+//             rentMortgage: 0,
+//             utilities: 0,
+//             other: 0,
+//         };
+//         localStorage.setItem(EXPENSES, JSON.stringify(expenses));
+//     }
+//     return expenses;
+// }
+
+export function getExpenses() {
+    const stringyExpense = localStorage.getItem(EXPENSES);
+
+    if (stringyExpense) {
+        const parsedExpense = JSON.parse(stringyExpense);
+
+        return parsedExpense;
+
+    } else {
+        const stringyDefaultExpense = {
             gas: 0,
             groceries: 0,
-            rentMortgage: 0,
+            house: 0,
             utilities: 0,
             other: 0,
         };
-        localStorage.setItem(EXPENSES, JSON.stringify(expenses));
+
+        localStorage.setItem(EXPENSES, JSON.stringify(stringyDefaultExpense));
+
+        return stringyDefaultExpense;
     }
-    return expenses;
 }
 
 export function setUser(USER) {
@@ -38,10 +60,11 @@ export function setUser(USER) {
     localStorage.setItem(USER, stringyUser);
 }
 
-export function setExpenses(EXPENSES) {
-    const stringyExpense = JSON.stringify(EXPENSES);
+export function setExpenses(expenses) {
+    const stringyExpense = JSON.stringify(expenses);
 
     localStorage.setItem(EXPENSES, stringyExpense);
+    console.log(JSON.stringify(EXPENSES));
 }
 
 
