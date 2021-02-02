@@ -64,7 +64,6 @@ export function setExpenses(expenses) {
     const stringyExpense = JSON.stringify(expenses);
 
     localStorage.setItem(EXPENSES, stringyExpense);
-    console.log(JSON.stringify(EXPENSES));
 }
 
 
