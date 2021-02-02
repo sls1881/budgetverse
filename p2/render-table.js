@@ -13,14 +13,19 @@ export function renderTableRow(userProfile, userExpense) {
     const balanceTd = document.createElement('td');
     const typeTd = document.createElement('td');
 
-    budgetTd.textContent = userExpense.expenses;
+    typeTd.textContent
 
     tr.append(budgetTd, expenseTd, balanceTd, typeTd);
     tbody.append(tr);
 
+    // Grab tds by ID
+    //Update textContent (userProfile.gas)*10
 
 }
 
+//booger
+
+//Write calcTotal function to calculate balance. Call calcTotal *5
 // // export function renderTable(cartItem, shoe) {
 // //     const quantity = cartItem.quantity;
 
