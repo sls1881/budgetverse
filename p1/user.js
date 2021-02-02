@@ -5,7 +5,6 @@
 import { setUser } from '../localStorage.js';
 
 //grab button element 
-const button = document.getElementById('p1-button');
 const form = document.querySelector('form');
 
 // Button Event Listener
@@ -15,7 +14,7 @@ const form = document.querySelector('form');
 //  refer to localstorage.js and convert to string for local storage(setuser)
 //  Send to p2
 
-form.addEventListener('submit', (e) =>{
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
 

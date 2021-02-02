@@ -4,4 +4,30 @@
 
 
 // form data - like the pokemon example
+const form = document.querySelector('form');
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const expenseItem = {
+
+
+    },
+};
+
+type: value('gas')
+
+
+
+
+// const userProfile = {
+//     name: formData.get('name'),
+//     income: formData.get('income'),
+//     savings: formData.get('savings'),
+//     expenses: {
+//         gas: formData.get('gas'),
+//         groceries: formData.get('groceries'),
+//         rentMortgage: formData.get('rent-mortgage'),
+//         utilities: formData.get('utilities'),
+//         other: formData.get('other'),
