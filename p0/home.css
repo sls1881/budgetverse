@@ -2,10 +2,41 @@
     box-sizing: border-box;
   }
 
-  h1 {
+  body, input, button {
+    font-family: 'Rubik', sans-serif;
+    --color1: hsla(151, 67%, 72%, 1);
+    --color2: hsla(122, 100%, 79%, 1);
+    --color3: hsla(113, 100%, 83%, 1);
+    --color4: hsla(99, 100%, 86%, 1);
+    --color5: hsla(68, 53%, 92%, 1);
+  }
+
+  main.about-us {
+    background-color: var(--color5);
+  }
+
+  main.home {
+      background-color: var(--color3);
+      height: 100vh;
+  }
+
+  nav {
+      width: 100px;
+      
+  }
+
+  h1, h2 {
       display: flex;
       justify-content: center;
       align-items: center;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  header {
+      padding-bottom: 20px;
   }
 
   .links {
@@ -18,3 +49,24 @@
       justify-content: center;
       align-items: center;
   }
+
+  p {
+      text-align: justify;
+  }
+
+  img {
+      height: 200px;
+      border-radius: 50%;
+  }
+
+  section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+    
+    .shelby, .edmond, .cherno, .moises {
+        margin: 10px;
+    }
+
+   
