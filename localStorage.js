@@ -54,8 +54,8 @@ export function getExpenses() {
     }
 }
 
-export function setUser(USER) {
-    const stringyUser = JSON.stringify(USER);
+export function setUser(user) {
+    const stringyUser = JSON.stringify(user);
 
     localStorage.setItem(USER, stringyUser);
 }

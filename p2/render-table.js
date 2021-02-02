@@ -2,22 +2,18 @@
 
 //Create render function for dynamic table rows
 export function renderTableRow(userProfile, userExpense) {
-    console.log(userExpense, 'userexpense');
-    console.log(userProfile, 'userprofile');
+    const expenseItem = userExpense;
+    const userItem = userProfile;
+    const gasExpense = document.getElementById('gas-expense');
+    const gasBudget = document.getElementById('gas-budget');
+    const gasSpent = document.getElementById('gas-spent');
+    const gasRemaining = document.getElementById('gas-remaining');
+    const tBody = document.querySelector('tbody');
 
-    const tbody = document.getElementById('table');
-    const tr = document.createElement('tr');
-
-    const budgetTd = document.createElement('td');
-    const expenseTd = document.createElement('td');
-    const balanceTd = document.createElement('td');
-    const typeTd = document.createElement('td');
-
-    typeTd.textContent
-
-    tr.append(budgetTd, expenseTd, balanceTd, typeTd);
-    tbody.append(tr);
-
+    gasBudget.textContent = userItem.expenses.gas;
+    gasSpent.textContent = expenseItem.gas;
+    gasRemaining.textContent = Number(userItem.expenses.gas) - Number(expenseItem.gas);
+    console.log(userItem)
     // Grab tds by ID
     //Update textContent (userProfile.gas)*10
 
