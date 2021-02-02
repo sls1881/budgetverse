@@ -38,7 +38,6 @@ form.addEventListener('submit', (e) => {
 
     //add new item to existing stored item
     setExpenses(expenseItem);
-
     //call the render function
     renderTableRow(stagnantUser, dynamicExpense);
 
