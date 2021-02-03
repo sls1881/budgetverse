@@ -9,7 +9,6 @@ const expenseItem = getExpenses();
 const userItem = getUser();
 
 const percent = percentMaker(userItem, expenseItem);
-
 const adviceDisplay = document.getElementById('advice-result');
 
 ////text content and temporal literals for displaying advice
@@ -18,26 +17,27 @@ const gasResult = adviceGenerator(percent);
 
 const adviceMessageGas = gasMessages[gasResult];
 
-const adviceGas = `${userItem.name} you spent ${expenseItem.gas} on gas. ${adviceMessageGas}`;
+const adviceGas = `You spent ${expenseItem.gas} on gas. ${adviceMessageGas}`;
 
 //Utilities message
 const utilitiesResult = adviceGenerator(percent);
 
 const adviceMessageUtils = utilitiesMessages[utilitiesResult];
 
-const adviceUtils = `${userItem.name} you spent ${expenseItem.utilities} on utilities. ${adviceMessageUtils}`;
+const adviceUtils = `You spent ${expenseItem.utilities} on utilities. ${adviceMessageUtils}`;
 
 //Other messages
 const otherResult = adviceGenerator(percent);
 
 const adviceMessage = otherMessages[otherResult];
 
-const adviceOther = `${userItem.name} you spent ${expenseItem.other} on other. ${adviceMessage}`;
+const adviceOther = `You spent ${expenseItem.other} on other. ${adviceMessage}`;
 
+adviceDisplay.textContent = `Hey, ${userItem.name} ${adviceGas} ${adviceUtils} ${adviceOther}`;
 
-adviceDisplay.textContent = adviceGas;
-adviceDisplay.textContent = adviceUtils;
-adviceDisplay.textContent = adviceOther;
+// adviceDisplay.textContent += adviceGas;
+// adviceDisplay.textContent += adviceUtils;
+// adviceDisplay.textContent += adviceOther;
 
 
 
