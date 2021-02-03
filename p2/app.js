@@ -42,17 +42,7 @@ form.addEventListener('submit', (e) => {
 });
 
 finButton.addEventListener('click', () => {
-    window.location = '../p3';
+    window.location = '../p3-results';
 });
 
 
-// const userProfile = {
-//     name: formData.get('name'),
-//     income: formData.get('income'),
-//     savings: formData.get('savings'),
-//     expenses: {
-//         gas: formData.get('gas'),
-//         groceries: formData.get('groceries'),
-//         rentMortgage: formData.get('rent-mortgage'),
-//         utilities: formData.get('utilities'),
-//         other: formData.get('other'),
