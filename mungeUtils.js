@@ -2,10 +2,9 @@
 export function labelArray(userItem) {
     const label = [];
     for (const property in userItem) {
-        label.push(property);
+        label.push(property.charAt(0).toUpperCase() + property.slice(1));
     }
     return label;
-
 }
 export function spentArray(userItem) {
     const label = [];
@@ -13,7 +12,6 @@ export function spentArray(userItem) {
         label.push(userItem[property]);
     }
     return label;
-
 }
 export function budgetArray(userItem) {
     const label = [];
@@ -21,7 +19,6 @@ export function budgetArray(userItem) {
         label.push(userItem[property]);
     }
     return label;
-
 }
 
 ////for loop to push item to array

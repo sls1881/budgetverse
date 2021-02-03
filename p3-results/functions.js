@@ -2,8 +2,7 @@ export function percentMaker(userItem, expenseItem) {
 
     const itemExpense = expenseItem;
     const itemUser = userItem;
-    const percent = (itemExpense.gas) / (itemUser.expenses.gas);
-    console.log(percent);
+    const percent = itemExpense / itemUser;
 
     return percent;
 }
@@ -17,3 +16,20 @@ export function adviceGenerator(percent) {
     }
     return 'sweetSpot';
 }
+
+
+// const moneyMessage = deadOrAliveMoneyMessages[resultMoney];
+
+// let burgerBuckMessages = null;
+
+// if (resultMoney === 'starved') {
+//     burgerBuckMessages = deadHealthMessages;
+// } else {
+//     burgerBuckMessages = aliveHealthMessages;
+// }
+
+// const healthMessage = burgerBuckMessages[resultHealth];
+
+// const results = `${user.name}, after eating at Bob's Burgers ${moneyMessage} ${healthMessage}.`;
+
+// resultMessage.textContent = results;
