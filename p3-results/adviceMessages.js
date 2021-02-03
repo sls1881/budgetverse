@@ -5,7 +5,7 @@ export const gasMessages = {
 
     underSpent: 'Nice job, now you can afford a SUV!!',
     overSpent: 'You have over spent on your gas, try to take public transportation next time',
-    sweetSpot: 'This will be',
+    sweetSpot: 'Not too bad. You are right where you want to be!',
 
 };
 

@@ -4,6 +4,7 @@
 export function renderTableRow(userProfile, userExpense) {
     const expenseItem = userExpense;
     const userItem = userProfile;
+    console.log(userItem);
     const gasBudget = document.getElementById('gas-budget');
     const gasSpent = document.getElementById('gas-spent');
     const gasRemaining = document.getElementById('gas-remaining');
