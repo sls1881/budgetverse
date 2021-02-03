@@ -46,6 +46,5 @@ export function renderTableRow(userProfile, userExpense) {
     savingsBudget.textContent = userItem.expenses.savings;
     savingsSpent.textContent = expenseItem.savings;
     savingsRemaining.textContent = Number(userItem.expenses.savings) - Number(expenseItem.savings);
-
 }
 
