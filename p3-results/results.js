@@ -12,6 +12,8 @@ console.log(labels);
 console.log(spentArray(expenseItem));
 
 
+
+
 ////event listener for button, on click
 //window.location redirect to p2
 
@@ -19,7 +21,22 @@ console.log(spentArray(expenseItem));
 
 const percent = percentMaker(userItem, expenseItem);
 
-console.log(adviceGenerator(percent));
+const adviceDisplay = document.getElementById('advice-result');
+
+const gasResult = adviceGenerator(percent);
+
+const adviceMessage = gasMessages[gasResult];
+
+
+//const adviceMessage = adviceMessages[gasResult];
+
+const advice = `${userItem.name} you spent ${expenseItem.gas} on gas. ${adviceMessage}.`;
+
+adviceDisplay.textContent = advice;
+
+
+
+
 
 
 
