@@ -30,6 +30,7 @@ export function getExpenses() {
             house: 0,
             utilities: 0,
             other: 0,
+            savings: 0,
         };
 
         localStorage.setItem(EXPENSES, JSON.stringify(stringyDefaultExpense));
@@ -49,30 +50,3 @@ export function setExpenses(expenses) {
 
     localStorage.setItem(EXPENSES, stringyExpense);
 }
-
-
-
-// export function clearUser() {
-//     const stringyDefaultUser = JSON.stringify(defaultEmptyUser);
-
-//     localStorage.setItem(USER, stringyDefaultUser);
-// }
-
-//setUser function
-//formData for p2
-
-// export function getExpenses() {
-//     let expenses = JSON.parse(localStorage.getItem(EXPENSES));
-
-//     if (!expenses) {
-//         expenses = {
-//             gas: 0,
-//             groceries: 0,
-//             rentMortgage: 0,
-//             utilities: 0,
-//             other: 0,
-//         };
-//         localStorage.setItem(EXPENSES, JSON.stringify(expenses));
-//     }
-//     return expenses;
-// }

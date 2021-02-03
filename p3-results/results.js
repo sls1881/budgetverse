@@ -2,47 +2,44 @@
 import { labelArray, spentArray, budgetArray } from '../mungeUtils.js';
 import { getExpenses, getUser } from '../localStorage.js';
 import { percentMaker, adviceGenerator } from './functions.js';
-import { gasMessages } from './adviceMessages.js';
+import { gasMessages, utilitiesMessages, otherMessages } from './adviceMessages.js';
 
 //call functions
 const expenseItem = getExpenses();
 const userItem = getUser();
-const labels = budgetArray(userItem.expenses);
-console.log(labels);
-console.log(spentArray(expenseItem));
-
-
-
-
-////event listener for button, on click
-//window.location redirect to p2
-
-// const booger = userItem
 
 const percent = percentMaker(userItem, expenseItem);
 
 const adviceDisplay = document.getElementById('advice-result');
 
+////text content and temporal literals for displaying advice
+//Gas messages
 const gasResult = adviceGenerator(percent);
 
-const adviceMessage = gasMessages[gasResult];
+const adviceMessageGas = gasMessages[gasResult];
+
+const adviceGas = `${userItem.name} you spent ${expenseItem.gas} on gas. ${adviceMessageGas}`;
+
+//Utilities message
+const utilitiesResult = adviceGenerator(percent);
+
+const adviceMessageUtils = utilitiesMessages[utilitiesResult];
+
+const adviceUtils = `${userItem.name} you spent ${expenseItem.utilities} on utilities. ${adviceMessageUtils}`;
+
+//Other messages
+const otherResult = adviceGenerator(percent);
+
+const adviceMessage = otherMessages[otherResult];
+
+const adviceOther = `${userItem.name} you spent ${expenseItem.other} on other. ${adviceMessage}`;
 
 
-//const adviceMessage = adviceMessages[gasResult];
-
-const advice = `${userItem.name} you spent ${expenseItem.gas} on gas. ${adviceMessage}.`;
-
-adviceDisplay.textContent = advice;
+adviceDisplay.textContent = adviceGas;
+adviceDisplay.textContent = adviceUtils;
+adviceDisplay.textContent = adviceOther;
 
 
-
-
-
-
-
-
-
-////text content and temporal literals for displaying advice
 
 //Use conditional to set message values(results.js in adventure)
 var ctx = document.getElementById('myChart').getContext('2d');
