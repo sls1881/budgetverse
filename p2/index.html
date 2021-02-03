@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    <nav class="links">
+        <a class="home" href="../" title="Home">Home</a>
+        <a class='about' href='../p0/about.html'>About</a>
+        <a class='budget' href='../p2/'>Budget</a>
+        <a class='results' href='../p3-results/'>Results</a>
+    </nav>
     <h1>Expenses</h1>
     <section class="main-section">
         <form>
@@ -36,12 +42,15 @@
                     <option name='other' value="other">
                         Other
                     </option>
+                    <option name='savings' value='savings'>
+                        Savings
+                    </option>
                 </select>
             </label>
             <label>
                 <label>
                     Amount
-                    <input name="amount" />
+                    <input class='amount' name="amount" />
 
                     <button class="form-button">Submit</button>
 
@@ -87,6 +96,12 @@
                     <td id='other-budget'></td>
                     <td id='other-spent'></td>
                     <td id='other-remaining'></td>
+                </tr>
+                <tr id='savings-expense'>
+                    <td>Savings</td>
+                    <td id='savings-budget'></td>
+                    <td id='savings-spent'></td>
+                    <td id='savings-remaining'></td>
                 </tr>
             </tbody>
 

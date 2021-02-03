@@ -4,7 +4,6 @@
 export function renderTableRow(userProfile, userExpense) {
     const expenseItem = userExpense;
     const userItem = userProfile;
-    console.log(userItem);
     const gasBudget = document.getElementById('gas-budget');
     const gasSpent = document.getElementById('gas-spent');
     const gasRemaining = document.getElementById('gas-remaining');
@@ -40,6 +39,13 @@ export function renderTableRow(userProfile, userExpense) {
     otherBudget.textContent = userItem.expenses.other;
     otherSpent.textContent = expenseItem.other;
     otherRemaining.textContent = Number(userItem.expenses.other) - Number(expenseItem.other);
+
+    const savingsBudget = document.getElementById('savings-budget');
+    const savingsSpent = document.getElementById('savings-spent');
+    const savingsRemaining = document.getElementById('savings-remaining');
+    savingsBudget.textContent = userItem.expenses.savings;
+    savingsSpent.textContent = expenseItem.savings;
+    savingsRemaining.textContent = Number(userItem.expenses.savings) - Number(expenseItem.savings);
 
 }
 

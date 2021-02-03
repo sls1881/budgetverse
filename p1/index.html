@@ -7,6 +7,12 @@
 </head>
 
 <body>
+    <nav class="links">
+        <a class="home" href="../" title="Home">Home</a>
+        <a class='about' href='../p0/about.html'>About</a>
+        <a class='expense' href='../p2/'>Expenses</a>
+        <a class='results' href='../p3-results/'>Results</a>
+    </nav>
     <main>
         <h1>Expenses Budget</h1>
         <section class='p1-section'>
@@ -20,16 +26,13 @@
                     <input name='income' type='number'>
                 </label>
                 <label>
-                    Monthly Savings:
-                    <input name='savings' type='number'>
-                </label>
-                <label>
                     Monthly Expenses:
                     <input name='gas' placeholder="Gas" type='number'>
                     <input name='groceries' placeholder="Groceries" type='number'>
                     <input name='rent-mortgage' placeholder="Rent/mortgage" type='number'>
                     <input name='utilities' placeholder="Utilities" type='number'>
                     <input name='other' placeholder="Other" type='number'>
+                    <input name='savings' placeholder="Savings" type='number'>
                 </label>
 
                 <button class='p1-button' id='p1-button'>Submit</button>
