@@ -1,6 +1,8 @@
 //get dom elements
 import { labelArray, spentArray, budgetArray } from '../mungeUtils.js';
 import { getExpenses, getUser } from '../localStorage.js';
+import { percentMaker, adviceGenerator } from './functions.js';
+import { gasMessages } from './adviceMessages.js';
 
 //call functions
 const expenseItem = getExpenses();
@@ -12,6 +14,16 @@ console.log(spentArray(expenseItem));
 
 ////event listener for button, on click
 //window.location redirect to p2
+
+// const booger = userItem
+
+const percent = percentMaker(userItem, expenseItem);
+
+console.log(adviceGenerator(percent));
+
+
+
+
 
 ////text content and temporal literals for displaying advice
 
@@ -45,16 +57,7 @@ var myChart = new Chart(ctx, { // eslint-disable-line
                 ticks: {
                     beginAtZero: true,
                     min: 0,
-                    max: 100,
-                    callback: function (value) {
-                        return value + "%"
-                    }
-                },
-                scaleLabel: {
-                    display: true,
-                    labelString: "Percentage"
                 }
-
 
             }],
 
