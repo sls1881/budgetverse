@@ -25,7 +25,7 @@ form.addEventListener('submit', (e) => {
         expenses: {
             gas: formData.get('gas'),
             groceries: formData.get('groceries'),
-            rentMortgage: formData.get('rent-mortgage'),
+            house: formData.get('rent-mortgage'),
             utilities: formData.get('utilities'),
             other: formData.get('other'),
         },
