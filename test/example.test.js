@@ -1,4 +1,5 @@
 import { getUser, getExpenses, setExpenses } from '../localStorage.js';
+import { labelArray } from '../mungeUtils.js';
 
 const test = QUnit.test;
 
@@ -40,4 +41,32 @@ test('getExpenses should in the user from localstorage & return a object', (expe
 
     expect.deepEqual(expenses, testExpenses);
 });
+
+test('labelArray should take in a userItem & return a array of the properties', (expect) => {
+
+
+    const testExpenses = {
+        gas: 50,
+        groceries: 300,
+        house: 1000,
+        utilities: 100,
+        other: 50,
+        savings: 900
+    };
+
+    const expected = [
+        'gas',
+        'groceries',
+        'house',
+        'utilities',
+        'other',
+        'savings',
+    ];
+
+    const actual = labelArray(testExpenses);
+
+    expect.deepEqual(actual, expected);
+});
+
+
 

@@ -5,7 +5,7 @@ export function labelArray(userItem) {
         label.push(property);
     }
     return label;
-    console.log(label)
+
 }
 export function spentArray(userItem) {
     const label = [];
