@@ -46,21 +46,21 @@ test('labelArray should take in a userItem & return a array of the properties', 
 
 
     const testExpenses = {
-        gas: 50,
-        groceries: 300,
-        house: 1000,
-        utilities: 100,
-        other: 50,
-        savings: 900
+        Gas: 50,
+        Groceries: 300,
+        House: 1000,
+        Utilities: 100,
+        Other: 50,
+        Savings: 900
     };
 
     const expected = [
-        'gas',
-        'groceries',
-        'house',
-        'utilities',
-        'other',
-        'savings',
+        'Gas',
+        'Groceries',
+        'House',
+        'Utilities',
+        'Other',
+        'Savings',
     ];
 
     const actual = labelArray(testExpenses);

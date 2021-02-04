@@ -38,8 +38,13 @@ label {
 }
 
 select {
-    width: 160px;
+    width: 170px;
     height: 24px;
+}
+
+.amount {
+    width: 162px;
+    height: 20px;
 }
 
 h1 {
@@ -52,7 +57,7 @@ a {
 }
 
 table {
-    background-color: hsla(15, 67%, 78%, .25);
+    background-color: rgba(0, 0, 0, 0.6);
     color: whitesmoke;
 }
 
@@ -84,4 +89,7 @@ button,input, select {
     justify-content: center;
 }
 
-
+#fin-button {
+    height: 40px;
+    width: 150px;
+}

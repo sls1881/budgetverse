@@ -1,5 +1,5 @@
-//get dom elements
-import { labelArray, spentArray, budgetArray } from '../mungeUtils.js';
+//grabs dom elements
+import { labelArray, dataArray } from '../mungeUtils.js';
 import { getExpenses, getUser } from '../localStorage.js';
 import { percentMaker, adviceGenerator } from './functions.js';
 import { message } from './adviceMessages.js';
@@ -9,44 +9,22 @@ const expenseItem = getExpenses();
 const userItem = getUser();
 const adviceDisplay = document.getElementById('advice-result');
 
-// const percent = percentMaker(userItem, expenseItem);
 
-// ////text content and temporal literals for displaying advice
-// //Gas messages
-// const gasResult = adviceGenerator(percent);
-
-// const adviceMessageGas = gasMessages[gasResult];
-
-// const adviceGas = `You spent ${expenseItem.gas} on gas. ${adviceMessageGas}`;
-
-// //Utilities message
-// const utilitiesResult = adviceGenerator(percent);
-
-// const adviceMessageUtils = utilitiesMessages[utilitiesResult];
-
-// const adviceUtils = `You spent ${expenseItem.utilities} on utilities. ${adviceMessageUtils}`;
-
-// // Other messages
-// // const otherResult = adviceGenerator(percent);
-// // const adviceMessage = otherMessages[otherResult];
-// // const adviceOther = `You spent ${expenseItem.other} on other. ${adviceMessage}`;
-
-// // adviceDisplay.textContent = `Hey, ${userItem.name} ${adviceGas} ${adviceUtils} ${adviceOther}`;
-
+//iterates through properties of expenseItem and outputs advice depending on how much was spent
 for (let property in expenseItem) {
-    const booger = property;
-    const spent = expenseItem[booger];
-    const budget = userItem.expenses[booger];
+    const expenseName = property;
+    const spent = expenseItem[expenseName];
+    const budget = userItem.expenses[expenseName];
     const percent = percentMaker(budget, spent);
     const result = adviceGenerator(percent);
-    if (booger === 'house' || booger === 'groceries' || booger === 'savings') {
+    if (expenseName === 'house' || expenseName === 'groceries' || expenseName === 'savings') {
         adviceDisplay.textContent += '';
     } else {
-        adviceDisplay.textContent += `${booger.charAt(0).toUpperCase() + booger.slice(1)}: ${message(result, booger)} `;
+        adviceDisplay.textContent += `${expenseName.charAt(0).toUpperCase() + expenseName.slice(1)}: ${message(result, expenseName)} `;
     }
 }
 
-// Use conditional to set message values(results.js in adventure)
+// Use conditionals to set message values
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, { // eslint-disable-line
 
@@ -60,13 +38,13 @@ var myChart = new Chart(ctx, { // eslint-disable-line
             label: 'Actual',
             backgroundColor: 'hsla(205, 38%, 40%, 1)',
             borderColor: 'white',
-            data: spentArray(expenseItem)
+            data: dataArray(expenseItem)
         },
         {
             label: 'Budget',
             backgroundColor: 'hsla(108, 24%, 48%, 1)',
             borderColor: 'white',
-            data: budgetArray(userItem.expenses)
+            data: dataArray(userItem.expenses)
         },
         ]
     },

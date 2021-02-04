@@ -1,13 +1,10 @@
-// import functions and grab DOM elements
-// initialize state
-// set event listeners to update state and DOM
 //import from localstorage.js
 import { setUser } from '../localStorage.js';
 
 //grab form element 
 const form = document.querySelector('form');
 
-// Expense form Event Listener
+// budget form Event Listener
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);

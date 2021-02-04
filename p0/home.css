@@ -2,6 +2,11 @@
     box-sizing: border-box;
   }
 
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
   body, input, button {
     font-family: 'Rubik', sans-serif;
     
@@ -21,6 +26,7 @@
   main.about-us {
     background-image: url('https://sm.mashable.com/mashable_in/photo/default/nasa-galaxy_9pu4.jpg');
     background-size: cover;
+    height: 100vh;
   }
 
   main.home {
@@ -36,6 +42,8 @@
 
   button, input {
       border-radius: 10px;
+      height: 40px;
+      width: 150px;
   }
 
   h1, h2, p {
