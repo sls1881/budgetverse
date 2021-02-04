@@ -16,20 +16,3 @@ export function adviceGenerator(percent) {
     }
     return 'sweetSpot';
 }
-
-
-// const moneyMessage = deadOrAliveMoneyMessages[resultMoney];
-
-// let burgerBuckMessages = null;
-
-// if (resultMoney === 'starved') {
-//     burgerBuckMessages = deadHealthMessages;
-// } else {
-//     burgerBuckMessages = aliveHealthMessages;
-// }
-
-// const healthMessage = burgerBuckMessages[resultHealth];
-
-// const results = `${user.name}, after eating at Bob's Burgers ${moneyMessage} ${healthMessage}.`;
-
-// resultMessage.textContent = results;

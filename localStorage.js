@@ -2,9 +2,7 @@
 const USER = 'USER';
 const EXPENSES = 'EXPENSES';
 
-
-// defaultEmptyUser = [];
-//getUser function
+//gets user data from the local storage
 export function getUser() {
     let user = JSON.parse(localStorage.getItem(USER));
 
@@ -15,6 +13,7 @@ export function getUser() {
     return user;
 }
 
+//gets expenses data from the local storage 
 export function getExpenses() {
     const stringyExpense = localStorage.getItem(EXPENSES);
 
@@ -39,12 +38,14 @@ export function getExpenses() {
     }
 }
 
+//sets user data to the local storage
 export function setUser(user) {
     const stringyUser = JSON.stringify(user);
 
     localStorage.setItem(USER, stringyUser);
 }
 
+//sets user expense data to the local storage
 export function setExpenses(expenses) {
     const stringyExpense = JSON.stringify(expenses);
 

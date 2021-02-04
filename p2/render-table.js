@@ -1,7 +1,5 @@
-
-
-//Create render function for dynamic table rows
 export function renderTableRow(userProfile, userExpense) {
+
     const expenseItem = userExpense;
     const userItem = userProfile;
     const gasBudget = document.getElementById('gas-budget');
