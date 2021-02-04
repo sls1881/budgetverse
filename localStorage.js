@@ -53,17 +53,17 @@ export function setExpenses(expenses) {
     localStorage.setItem(EXPENSES, stringyExpense);
 }
 
-export function clearUser() {
-    //Stringify the array
-    const clearStorageString = JSON.stringify(reset);
+export function clearStorage() {
+    const stringyDefaultExpense = {
+        car: 0,
+        food: 0,
+        house: 0,
+        utilities: 0,
+        other: 0,
+        savings: 0,
+    };
 
-    //Save cart to local storage
-    localStorage.setItem(USER, clearStorageString);
-}
-
-export function clearExpense() {
-    //Stringify the array
-    const clearStorageString = JSON.stringify(reset);
+    const clearStorageString = JSON.stringify(stringyDefaultExpense);
 
     //Save cart to local storage
     localStorage.setItem(EXPENSES, clearStorageString);

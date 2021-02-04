@@ -1,8 +1,13 @@
 // import functions 
-import { getExpenses, setExpenses, getUser } from '../localStorage.js';
+import { getExpenses, setExpenses, getUser, clearStorage } from '../localStorage.js';
 import { renderTableRow } from './render-table.js';
 
 const finButton = document.getElementById('fin-button');
+
+const resetButton = document.createElement('button');
+const addButton = document.getElementById('reset-button');
+resetButton.textContent = 'Clear Profile';
+addButton.append(resetButton);
 
 const dynamicExpense = getExpenses();
 const user = getUser();
@@ -37,6 +42,16 @@ form.addEventListener('submit', (e) => {
 // redirects to financial advice page (p3)
 finButton.addEventListener('click', () => {
     window.location = '../p3-results';
+});
+
+//Clear expenses
+resetButton.addEventListener('click', () => {
+    clearStorage();
+
+    getExpenses();
+
+    renderTableRow(user, dynamicExpense);
+
 });
 
 
