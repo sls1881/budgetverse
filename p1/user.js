@@ -1,8 +1,13 @@
 //import from localstorage.js
-import { setUser } from '../localStorage.js';
+import { clearUser, setUser } from '../localStorage.js';
 
 //grab form element 
 const form = document.querySelector('form');
+const resetButton = document.createElement('button');
+const main = document.querySelector('main');
+resetButton.textContent = 'Clear Profile';
+main.append(resetButton);
+
 
 // budget form Event Listener
 form.addEventListener('submit', (e) => {
@@ -24,4 +29,8 @@ form.addEventListener('submit', (e) => {
 
     setUser(userProfile);
     window.location = '../p2';
+});
+
+resetButton.addEventListener('click', () => {
+    clearUser();
 });

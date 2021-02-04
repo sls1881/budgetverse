@@ -1,6 +1,7 @@
 //magic string
 const USER = 'USER';
 const EXPENSES = 'EXPENSES';
+const reset = [];
 
 //gets user data from the local storage
 export function getUser() {
@@ -50,4 +51,20 @@ export function setExpenses(expenses) {
     const stringyExpense = JSON.stringify(expenses);
 
     localStorage.setItem(EXPENSES, stringyExpense);
+}
+
+export function clearUser() {
+    //Stringify the array
+    const clearStorageString = JSON.stringify(reset);
+
+    //Save cart to local storage
+    localStorage.setItem(USER, clearStorageString);
+}
+
+export function clearExpense() {
+    //Stringify the array
+    const clearStorageString = JSON.stringify(reset);
+
+    //Save cart to local storage
+    localStorage.setItem(EXPENSES, clearStorageString);
 }
