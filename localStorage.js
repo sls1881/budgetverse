@@ -24,8 +24,8 @@ export function getExpenses() {
 
     } else {
         const stringyDefaultExpense = {
-            gas: 0,
-            groceries: 0,
+            car: 0,
+            food: 0,
             house: 0,
             utilities: 0,
             other: 0,

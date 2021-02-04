@@ -13,8 +13,8 @@ form.addEventListener('submit', (e) => {
         name: formData.get('name'),
         income: formData.get('income'),
         expenses: {
-            gas: formData.get('gas'),
-            groceries: formData.get('groceries'),
+            car: formData.get('car'),
+            food: formData.get('food'),
             house: formData.get('rent-mortgage'),
             utilities: formData.get('utilities'),
             other: formData.get('other'),

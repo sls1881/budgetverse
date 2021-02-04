@@ -7,8 +7,9 @@ import { message } from './adviceMessages.js';
 //call functions
 const expenseItem = getExpenses();
 const userItem = getUser();
-const adviceDisplay = document.getElementById('advice-result');
-
+const adviceDisplaycar = document.getElementById('car-advice');
+const adviceDisplayOther = document.getElementById('other-advice');
+const adviceDisplayUtilities = document.getElementById('utilities-advice');
 
 //iterates through properties of expenseItem and outputs advice depending on how much was spent
 for (let property in expenseItem) {
@@ -17,10 +18,16 @@ for (let property in expenseItem) {
     const budget = userItem.expenses[expenseName];
     const percent = percentMaker(budget, spent);
     const result = adviceGenerator(percent);
-    if (expenseName === 'house' || expenseName === 'groceries' || expenseName === 'savings') {
-        adviceDisplay.textContent += '';
+    if (expenseName === 'house' || expenseName === 'food' || expenseName === 'savings') {
+        adviceDisplaycar.textContent += '';
     } else {
-        adviceDisplay.textContent += `${expenseName.charAt(0).toUpperCase() + expenseName.slice(1)}: ${message(result, expenseName)} `;
+        if (expenseName === 'car') {
+            adviceDisplaycar.textContent += `${expenseName.charAt(0).toUpperCase() + expenseName.slice(1)}: ${message(result, expenseName)}`;
+        } else if (expenseName === 'other') {
+            adviceDisplayOther.textContent += `${expenseName.charAt(0).toUpperCase() + expenseName.slice(1)}: ${message(result, expenseName)}`;
+        } else {
+            adviceDisplayUtilities.textContent += `${expenseName.charAt(0).toUpperCase() + expenseName.slice(1)}: ${message(result, expenseName)}`;
+        }
     }
 }
 

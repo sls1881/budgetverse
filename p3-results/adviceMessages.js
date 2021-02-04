@@ -2,9 +2,9 @@
 //underSpent, overSpent, sweetSpot
 
 export function message(result, expenseName) {
-    if (expenseName === 'gas') {
+    if (expenseName === 'car') {
         if (result === 'underSpent') {
-            return 'ALERT: We know it is Covid, but have you left the house at all?';
+            return 'ALERT: We know it is a pandemic, but have you left the house at all?';
         } else if (result === 'overSpent') {
             return 'WARNING: You do not have to drive to the mailbox.';
         } else {

@@ -2,20 +2,20 @@ export function renderTableRow(userProfile, userExpense) {
 
     const expenseItem = userExpense;
     const userItem = userProfile;
-    const gasBudget = document.getElementById('gas-budget');
-    const gasSpent = document.getElementById('gas-spent');
-    const gasRemaining = document.getElementById('gas-remaining');
+    const carBudget = document.getElementById('car-budget');
+    const carSpent = document.getElementById('car-spent');
+    const carRemaining = document.getElementById('car-remaining');
 
-    gasBudget.textContent = userItem.expenses.gas;
-    gasSpent.textContent = expenseItem.gas;
-    gasRemaining.textContent = Number(userItem.expenses.gas) - Number(expenseItem.gas);
+    carBudget.textContent = userItem.expenses.car;
+    carSpent.textContent = expenseItem.car;
+    carRemaining.textContent = Number(userItem.expenses.car) - Number(expenseItem.car);
 
-    const groceriesBudget = document.getElementById('groceries-budget');
-    const groceriesSpent = document.getElementById('groceries-spent');
-    const groceriesRemaining = document.getElementById('groceries-remaining');
-    groceriesBudget.textContent = userItem.expenses.groceries;
-    groceriesSpent.textContent = expenseItem.groceries;
-    groceriesRemaining.textContent = Number(userItem.expenses.groceries) - Number(expenseItem.groceries);
+    const foodBudget = document.getElementById('food-budget');
+    const foodSpent = document.getElementById('food-spent');
+    const foodRemaining = document.getElementById('food-remaining');
+    foodBudget.textContent = userItem.expenses.food;
+    foodSpent.textContent = expenseItem.food;
+    foodRemaining.textContent = Number(userItem.expenses.food) - Number(expenseItem.food);
 
     const houseBudget = document.getElementById('house-budget');
     const houseSpent = document.getElementById('house-spent');
