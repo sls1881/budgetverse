@@ -1,7 +1,6 @@
 //magic string
 const USER = 'USER';
 const EXPENSES = 'EXPENSES';
-const reset = [];
 
 //gets user data from the local storage
 export function getUser() {

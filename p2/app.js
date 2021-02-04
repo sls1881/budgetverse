@@ -27,6 +27,7 @@ form.addEventListener('submit', (e) => {
     const expense = formData.get('expense');
     const amount = formData.get('amount');
 
+
     //compare new expenseItem to current EXPENSE in local storage
     expenseItem[expense] += Number(amount);
 
@@ -48,10 +49,8 @@ finButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     clearStorage();
 
-    getExpenses();
-
-    renderTableRow(user, dynamicExpense);
-
+    const expense = getExpenses();
+    renderTableRow(user, expense);
 });
 
 
