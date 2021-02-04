@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="p1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>The Money Team</title>
 </head>
 
@@ -16,27 +17,30 @@
     <main>
         <h1>Expenses Budget</h1>
         <section class='p1-section'>
-            <form class='p1-form'>
-                <label>
-                    User Profile Name:
-                    <input name='name'>
-                </label>
-                <label>
-                    Monthly Income:
-                    <input name='income' type='number'>
-                </label>
-                <label>
-                    Monthly Expenses:
-                    <input name='gas' placeholder="Gas" type='number'>
-                    <input name='groceries' placeholder="Groceries" type='number'>
-                    <input name='rent-mortgage' placeholder="Rent/mortgage" type='number'>
-                    <input name='utilities' placeholder="Utilities" type='number'>
-                    <input name='other' placeholder="Other" type='number'>
-                    <input name='savings' placeholder="Savings" type='number'>
-                </label>
-
-                <button class='p1-button' id='p1-button'>Submit</button>
-            </form>
+            <fieldset>
+                <form class='p1-form'>
+                    <label>
+                        User Profile Name:
+                        <input name='name'>
+                    </label>
+                    <label>
+                        Monthly Income:
+                        <input name='income' type='number'>
+                    </label>
+                    <label>
+                        Monthly Expenses:
+                        <input name='gas' placeholder="Gas" type='number'>
+                        <input name='groceries' placeholder="Groceries" type='number'>
+                        <input name='rent-mortgage' placeholder="Rent/mortgage" type='number'>
+                        <input name='utilities' placeholder="Utilities" type='number'>
+                        <input name='other' placeholder="Other" type='number'>
+                        <input name='savings' placeholder="Savings" type='number'>
+                    </label>
+                    <div class="button">
+                        <button class='p1-button' id='p1-button'>Submit</button>
+                    </div>
+                </form>
+            </fieldset>
         </section>
     </main>
 

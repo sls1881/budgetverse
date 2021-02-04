@@ -1,7 +1,75 @@
+body, input, button {
+    font-family: 'Rubik', sans-serif;
+    
+    --color1: hsla(188, 12%, 25%, 1);
+    --color2: hsla(108, 24%, 48%, 1);
+    --color3: hsla(32, 39%, 66%, 1);
+    --color4: hsla(15, 67%, 78%, 1);
+    --color5: hsla(68, 53%, 92%, 1);
+    --color6: hsla(0, 52%, 94%, 1);
+    --color7: hsla(228, 25%, 12%, 1);
+    --color8: hsla(216, 44%, 25%, 1);
+    --color9: hsla(205, 38%, 40%, 1);
+    --color10: hsla(211, 31%, 66%, 1);
+    --color11: hsla(166, 73%, 88%, 1);
+  }
+
+body {
+    background-image: url('https://wallpapercave.com/wp/wp3837738.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+button, input {
+    border-radius: 10px;
+}
+
+nav {
+    width: 300px;  
+}
+
+h1, label{
+    text-align: center;
+    color: var(--color10);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
 label{
     display: block;
 }
 
 input{
     display: block;
+}
+
+a {
+    color: rgb(158, 157, 157);
+}
+
+fieldset {
+    background-color: rgba(241, 241, 241, .2);
+}
+
+legend {
+    color: var(--color10);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+button {
+    color: var(--color8);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
 }
