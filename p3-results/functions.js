@@ -16,3 +16,4 @@ export function adviceGenerator(percent) {
     }
     return 'sweetSpot';
 }
+
