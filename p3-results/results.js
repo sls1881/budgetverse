@@ -33,13 +33,13 @@ const adviceDisplay = document.getElementById('advice-result');
 
 // // adviceDisplay.textContent = `Hey, ${userItem.name} ${adviceGas} ${adviceUtils} ${adviceOther}`;
 
-for (let property in expenseItem){
+for (let property in expenseItem) {
     const booger = property;
     const spent = expenseItem[booger];
     const budget = userItem.expenses[booger];
     const percent = percentMaker(budget, spent);
     const result = adviceGenerator(percent);
-    if (booger === 'house' || booger === 'groceries' || booger === 'savings'){
+    if (booger === 'house' || booger === 'groceries' || booger === 'savings') {
         adviceDisplay.textContent += '';
     } else {
         adviceDisplay.textContent += `${booger.charAt(0).toUpperCase() + booger.slice(1)}: ${message(result, booger)} `;
@@ -58,14 +58,14 @@ var myChart = new Chart(ctx, { // eslint-disable-line
         labels: labelArray(expenseItem),
         datasets: [{
             label: 'Actual',
-            backgroundColor: 'turquoise',
-            borderColor: 'turquoise',
+            backgroundColor: 'hsla(205, 38%, 40%, 1)',
+            borderColor: 'white',
             data: spentArray(expenseItem)
         },
         {
             label: 'Budget',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'hsla(108, 24%, 48%, 1)',
+            borderColor: 'white',
             data: budgetArray(userItem.expenses)
         },
         ]
@@ -88,7 +88,7 @@ var myChart = new Chart(ctx, { // eslint-disable-line
                 ticks: {
                     beginAtZero: true,
                     fontSize: 20,
-                    fontColor: 'black'
+                    fontColor: 'rgb(73, 72, 72)'
 
                 },
                 stacked: true

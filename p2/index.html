@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./p2.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>TMT Expenses</title>
 
 </head>
@@ -18,10 +18,10 @@
         <a class='results' href='../p3-results/'>Results</a>
     </nav>
     <h1>Expenses</h1>
-    <section class="main-section">
+    <section class="form-section">
         <form>
-            Type
             <label>
+                Type
                 <select name='expense'>
                     <option name='gas' value="gas">
                         Gas
@@ -32,7 +32,7 @@
                     </option>
 
                     <option name='house' value="house">
-                        Housing expense
+                        Rent/Mortgage
                     </option>
 
                     <option name='utilities' value="utilities">
@@ -45,24 +45,23 @@
                     <option name='savings' value='savings'>
                         Savings
                     </option>
-                </select>
             </label>
-            <label>
-                <label>
-                    Amount
-                    <input class='amount' name="amount" />
+            <input class='amount' placeholder='Amount' name="amount" />
 
-                    <button class="form-button">Submit</button>
+            <button class="form-button">Submit</button>
 
         </form>
+        </select>
+    </section>
+    <section class="table-section">
         <table id="table">
 
 
             <thead>
-                <tr>
+                <tr class='thead'>
                     <td>Type</td>
                     <td>Budget</td>
-                    <td>Spent</td>
+                    <td>Actual</td>
                     <td>Remaining</td>
                 </tr>
             </thead>
@@ -106,12 +105,12 @@
             </tbody>
 
         </table>
-
-
     </section>
 
     </main>
-    <button id='fin-button'>Financial Advice</button>
+    <div class="button">
+        <button id='fin-button'>Financial Advice</button>
+    </div>
 
     <script type="module" src="./app.js"></script>
 </body>

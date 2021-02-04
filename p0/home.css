@@ -4,19 +4,28 @@
 
   body, input, button {
     font-family: 'Rubik', sans-serif;
-    --color1: hsla(151, 67%, 72%, 1);
-    --color2: hsla(122, 100%, 79%, 1);
-    --color3: hsla(113, 100%, 83%, 1);
-    --color4: hsla(99, 100%, 86%, 1);
+    
+    --color1: hsla(188, 12%, 25%, 1);
+    --color2: hsla(108, 24%, 48%, 1);
+    --color3: hsla(32, 39%, 66%, 1);
+    --color4: hsla(15, 67%, 78%, 1);
     --color5: hsla(68, 53%, 92%, 1);
+    --color6: hsla(0, 52%, 94%, 1);
+    --color7: hsla(228, 25%, 12%, 1);
+    --color8: hsla(216, 44%, 25%, 1);
+    --color9: hsla(205, 38%, 40%, 1);
+    --color10: hsla(211, 31%, 66%, 1);
+    --color11: hsla(166, 73%, 88%, 1);
   }
 
   main.about-us {
-    background-color: var(--color5);
+    background-image: url('https://sm.mashable.com/mashable_in/photo/default/nasa-galaxy_9pu4.jpg');
+    background-size: cover;
   }
 
   main.home {
-      background-color: var(--color3);
+      background-image: url('https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-2060x1288.jpg');
+      background-size: cover;
       height: 100vh;
   }
 
@@ -25,18 +34,36 @@
       
   }
 
-  h1, h2 {
+  button, input {
+      border-radius: 10px;
+  }
+
+  h1, h2, p {
       display: flex;
       justify-content: center;
       align-items: center;
-  }
-
-  h1 {
-      font-size: 1.8rem;
+      color: white;
   }
 
   header {
       padding-bottom: 20px;
+    }
+    
+    a {
+        color: rgb(158, 157, 157);
+    }
+    
+    .home-p {
+        font-size: 2rem;
+        padding: 20px;
+    }
+    
+    .home-title {
+        font-size: 3rem;
+    }
+
+  .home-title, .instructions {
+      color: white;
   }
 
   .links {
@@ -48,10 +75,6 @@
       display:flex;
       justify-content: center;
       align-items: center;
-  }
-
-  p {
-      text-align: justify;
   }
 
   img {
