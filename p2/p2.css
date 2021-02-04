@@ -20,7 +20,7 @@ body, input, button, select {
       height: 100vh;
   }
 
-  nav {
+nav {
     width: 300px;  
 }
 
@@ -87,6 +87,11 @@ button,input, select {
 .button {
     display: flex;
     justify-content: center;
+    margin: 30px;
+}
+
+.table-section {
+    height: 200px;
 }
 
 #fin-button {

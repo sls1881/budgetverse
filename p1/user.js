@@ -4,6 +4,8 @@ import { setUser } from '../localStorage.js';
 //grab form element 
 const form = document.querySelector('form');
 
+
+
 // budget form Event Listener
 form.addEventListener('submit', (e) => {
     e.preventDefault();
