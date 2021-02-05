@@ -11,8 +11,10 @@ const adviceDisplayCar = document.getElementById('car-advice');
 const adviceDisplayOther = document.getElementById('other-advice');
 const adviceDisplayUtilities = document.getElementById('utilities-advice');
 const adviceDisplaySavings = document.getElementById('savings-advice');
+const totalMessage = document.getElementById('total-message');
 
 
+totalMessage.textContent = `You've spent ${(percentMaker(userItem.income, expenseItem.total).toFixed(2)) * 100}% of your monthly income.`;
 //iterates through properties of expenseItem and outputs advice depending on how much was spent
 for (let property in expenseItem) {
     const expenseName = property;
@@ -71,9 +73,7 @@ var myChart = new Chart(ctx, { // eslint-disable-line
                     beginAtZero: true,
                     min: 0,
                 }
-
             }],
-
             xAxes: [{
                 ticks: {
                     beginAtZero: true,

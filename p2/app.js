@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
 
     //compare new expenseItem to current EXPENSE in local storage
     expenseItem[expense] += Number(amount);
-
+    expenseItem.total += Number(amount);
     //add new item to existing stored item
     setExpenses(expenseItem);
 
