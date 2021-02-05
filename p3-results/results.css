@@ -47,3 +47,8 @@ body {
     max-width: 1000px;
     margin-bottom: 20px;
 }
+
+#total-message {
+    color:rgb(73, 72, 72);
+    text-align: center;
+}
