@@ -13,8 +13,14 @@ const adviceDisplayUtilities = document.getElementById('utilities-advice');
 const adviceDisplaySavings = document.getElementById('savings-advice');
 const totalMessage = document.getElementById('total-message');
 
+//Calculates percentage of expenses Vs Monthly income.
+let totalExpense = 0;
+for (let item in expenseItem) {
+    totalExpense += expenseItem[item];
+}
 
-totalMessage.textContent = `You've spent ${Math.ceil((percentMaker(userItem.income, expenseItem.total)) * 100)}% of your monthly income.`;
+totalMessage.textContent = `You've used ${Math.ceil((percentMaker(userItem.income, totalExpense)) * 100)}% of your monthly income.`;
+
 //iterates through properties of expenseItem and outputs advice depending on how much was spent
 for (let property in expenseItem) {
     const expenseName = property;

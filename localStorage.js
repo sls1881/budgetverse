@@ -30,7 +30,6 @@ export function getExpenses() {
             utilities: 0,
             other: 0,
             savings: 0,
-            total: 0,
         };
 
         localStorage.setItem(EXPENSES, JSON.stringify(stringyDefaultExpense));
